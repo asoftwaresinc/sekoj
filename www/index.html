@@ -1,0 +1,100 @@
+<!DOCTYPE html><html ng-app="NewsApp"><head>
+<meta charset="utf-8" />
+<title>iIndia:News Jobs Weather Score and more  </title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+<meta name="apple-mobile-web-app-status-bar-style" content="yes" />
+<link rel="shortcut icon" href="cli/thumbnail.png" type="image/x-icon" />
+<style>.loading { display: block; position: fixed; width: 100%; top:50px; left:0; right:0; bottom: 0; background: url('cli/loading2.gif') rgba(255,255,255,.98) center center no-repeat;z-index: 1000;background-size: 140px; z-index: 10;}
+@font-face {src: url("cli/fonts/cdac.ttf");font-family: "cdac";}
+</style>
+<script src="cli/js/angular.min.js"></script>
+<script src="cli/js/loading-bar.js"></script>
+<link rel="stylesheet" href="cli/loading-bar.css" />
+<link rel="stylesheet" href="cli/mobile-angular-ui-base.css" />
+<link rel="stylesheet" href="cli/style.css" />
+<script src="cli/js/angular-route.min.js"></script>
+<script src="cli/js/angular-touch.min.js"></script>
+<script src="cli/js/mobile-angular-ui.js"></script>
+<script src="app.js"></script>
+
+<link rel="stylesheet" href="cli/font-awesome.min.css" />
+</head>
+
+<script> function addLink() {
+        //Get the selected text and append the extra info
+        var selection = window.getSelection(),
+            pagelink = ' Source: i India: all in one app for your city. http://goo.gl/YMAv7O ',
+            copytext = selection + pagelink,
+            newdiv = document.createElement('div');
+
+        //hide the newly created container
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+
+        //insert the container, fill it with the extended text, and define the new selection
+        document.body.appendChild(newdiv);
+        newdiv.innerHTML = copytext;
+        selection.selectAllChildren(newdiv);
+
+        window.setTimeout(function () {
+            document.body.removeChild(newdiv);
+        }, 100);
+    }
+
+    document.addEventListener('copy', addLink);</script>
+
+
+<body ng-controller="MainCtrl">
+<div ng-include="'view/sidebar.html'" class="sidebar sidebar-left"></div>
+<div ng-include="'view/sidebarRight.html'" class="sidebar sidebar-right"></div>
+<div class="app">
+<div class="navbar navbar-app navbar-absolute-top">
+<div class="navbar-brand navbar-brand-center" ui-yield-to="title"> <span style="
+display: block;
+font-weight: bold;
+color: #000;
+font-size: 21px;
+font-family: roboto;"><a href="#/Cities" style="color:#000">{{iCity}}</a></span></div>
+<div class="btn-group pull-left"><div ui-toggle="sidebarLeft" class="btn sidebar-toggle"><i class="fa fa-align-justify x" style="font-size:22px;"></i></div></div>
+
+
+
+
+
+
+
+<div class="btn-group pull-right" ui-yield-to="navbarAction">
+<div class="btn-group">
+<a ui-turn-on='LoginMenu' class='btn'> <i class="fa fa-gear x" style="font-size:22px;"></i></a>
+<ul class="dropdown-menu  pull-right"outer-click="Ui.turnOff('LoginMenu')"
+outer-click-if="Ui.active('LoginMenu')"role="menu"ui-show="LoginMenu" ui-state="LoginMenu"
+ui-turn-off="LoginMenu">
+<li><a href="./"><i class="fa fa-refresh"></i>  Refresh</a></li>
+<li ng-show="!Token || Token==''"><a href="#/Login/Login"><i class="fa fa-sign-in"></i> Login</a></li>
+<li  ng-show="Token || Token!=''"><a type="submit" ng-click="LogoutSubmit()"><i class="fa fa-sign-out"></i> Log out</a></li>
+<li><a href="#/Settings/MyProfile"><i class="fa fa-user"></i> My Profile</a></li>
+<li><a href="#/Publish/News"><i class="fa fa-newspaper-o"></i> Publish Your News</a></li>
+<li><a href="#/Publish/Classified"><i class="fa fa-car"></i> Post Free Ad</a></li>
+<li><a href="#/Publish/Job/New"><i class="fa fa-university"></i> Publish Your Job</a></li>
+
+<!-- <li><a href="#/Publish/GovtJob">Govt Job</a></li> -->
+<li class="divider"></li>
+<li><a><i class="fa fa-close"></i> Close</a></li>
+</ul>
+</div>
+<!-- <div ui-toggle="sidebarRight" class="btn">☀ Live</div> -->
+</div>
+</div>
+<div class="app-body" ng-class="{loading: loading}"> 
+<div class="app-content">
+<ng-view></ng-view>
+</div>
+</div>
+</div>
+</body>
+</html>
+<link rel="stylesheet" href="cli/mobile-angular-ui-hover.min.css" />
+<link rel="stylesheet" href="cli/mobile-angular-ui-desktop.min.css" />
+

@@ -1,0 +1,56 @@
+<div class="scrollable" ng-controller="JobsDetailController" >  <div ng-show="loading" class="loading"></div>
+
+<div class="scrollable-content">
+<div class="col-xs-12 Newsdetail" ng-repeat="x in Job">
+<b class="title">{{x.Title}}</b>
+<br>
+
+
+<p class="text-justify">Job Detail: {{x.Description}}</p>
+<p>Salary : </b> {{x.Salary}} {{x.SalaryPeriod}} </p>
+<p>Sector : </b> {{x.Sector}}</p>
+
+<br>
+
+<div class="legend b">Company Detail</div>
+
+<div class="companyinfo">
+<p><b>Company Name : </b> {{x.CompanyName}}</p>
+<p><b>Address : </b> {{x.Address}}</p>
+<p><b>City : </b> {{x.City}}</p>
+<p><b>Contact Person : </b> {{x.Person}}</p>
+<p><b>Mobile : </b> {{x.Mobile}}</p>
+<p><b>Email : </b> {{x.Email}}</p>
+<p> <b>Last Updated on : {{x.LastUpdated*1000 | date:'h:m a'}} <span> {{x.LastUpdated*1000 | date:'dd/MM/yyyy'}}</span></b></p>
+  
+
+</div>
+
+
+<div ng-show="Token==''">
+<div class="form-group">
+<a href="#/Login/Login" class="btn btn-danger">Login or Register Free to Apply for This Job</a> 
+</div>
+</div>
+
+<div ng-hide="Token==''">
+<div class="form-group">
+<button class="btn btn-primary btn-lg btn-block" ng-click="ApplyForJobSubmit()">Apply for This Job</button> 
+</div>
+</div>
+
+<hr>
+{{Response}}
+
+
+
+<div class="clearfix"></div>
+
+
+</div>
+ 
+ 
+</div>
+</div>
+ 
+  

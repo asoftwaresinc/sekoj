@@ -1,0 +1,96 @@
+<div class="scrollable" ng-controller="PublishNewsController"> 
+<div ng-show="loading" class="loading"></div>
+
+<div class="scrollable-content ">
+
+<div ng-show="Token==''">
+<div ng-include="'view/Login.html'"></div>
+</div>
+
+<div ng-hide="Token==''">
+
+
+<div class="col-sm-12 ">
+<div class="form-group">
+<p>Type your news and click on submit button. after submission we will review your news and publish on your given city.</p>
+<p class="bg-success">{{jobapplyresponse}}</p>
+</div></div>
+
+
+
+<div class="col-sm-12 ">
+<div class="form-group">
+<label>Title</label>
+<input type="text" class="form-control" ng-model="PublishNews.Title" />
+</div>
+</div>
+
+<div class="col-sm-12 ">
+<div class="form-group">
+<label>City</label>
+<select class="form-control" ng-model="PublishNews.City">
+<option ng-repeat="x in Settings.City">{{x}}</option>
+
+</select>		
+</div>
+</div>
+
+
+<div class="col-sm-12 ">
+<div class="form-group"><label>Category</label>
+<select class="form-control" ng-model="PublishNews.Category">
+<option ng-repeat="x in Settings.NewsCategory">{{x}}</option>
+
+</select>			
+</div>
+</div> 
+
+<div class="col-sm-12 ">
+<div class="form-group">
+<label>Content</label>
+<textarea class="form-control" rows="8" ng-model="PublishNews.Content"></textarea>
+</div>
+</div>
+
+
+<div class="col-sm-12 ">
+<div class="form-group">
+<label>Image from Url</label>
+<input type="text" class="form-control" ng-model="PublishNews.ImageUrl" />
+</div>
+</div>
+
+<!-- 
+<div class="col-sm-12">
+<div class="form-group">
+<label for="">Select Photo </label>
+<input type="file" name="Images" id=""class="form-control">
+</div>
+</div>
+-->
+
+<div class="col-sm-12 ">
+<div class="form-group">
+<button type="submit" ng-click="PublishNewsSubmit()" class="btn btn-primary pull-right">Submit</button>
+</div>
+
+<br>
+<br>
+
+
+
+</div>
+
+<div class="clearfix"></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+</div>
+</div>
+
+
+

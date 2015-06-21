@@ -1,0 +1,38 @@
+ 
+<div class="scrollable" ng-controller="MainCtrl" > 
+<div ng-show="loading" class="loading"></div>
+<div class="scrollable-content ">
+
+<div class="btn-group justified nav-tabs">
+<a href="#/News/National" class="btn btn-default">National</a>
+<a href="#/News/Politics" class="btn btn-default">Politics</a>
+<a href="#/Publish/News" class="btn btn-danger">Publish News</a> 
+</div>  
+
+
+
+<div class="list-group-item newslist" ng-repeat="x in News" ng-hide="$first">
+<a href="#News/Detail/{{ x.Id }}" class="media-heading">
+<div class="row">
+<div class="col-xs-3 col-sm-1 mr">
+<img src="http://cdn.anemaindia.com/apps/iindia/cdn/i/NewsImages/tt.php?src={{x.Img}}&w=80" class="thumbnail fit" alt="">
+</div>
+<div class="col-xs-9 col-sm-8 nm"><b style="  display: block;
+  min-height: 55px;">{{ ::x.Title }}</b>
+<div class="clearfix"></div>
+
+
+<div style="font-size: 14px; display:inline;"> {{ ::x.City }} :: {{x.Date*1000 | date:'dd/MM/yyyy'}}</div>
+<div style="font-size: 14px; display:inline; float:right; text-align:right"><a href="#News/Detail/{{ x.Id }}" class="btn btn-danger btn-xs">View Detail </a> &nbsp;</div>
+</div>
+<div class="clearfix"></div>
+</div>
+</a>
+</div>
+
+
+</div>
+</div>
+
+
+

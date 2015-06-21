@@ -1,0 +1,19 @@
+<div class="scrollable" ng-controller="QuotesListController" >  
+<div ng-show="loading" class="loading"></div>
+<div class="scrollable-content ">
+ 
+
+<div class="list-group-item newslist" ng-repeat="x in Quotes">
+<a href="#Quotes/Detail/{{ x.Id }}" class="media-heading">
+<div class="row">
+<div class="col-xs-12 nm b"><i class="sidebarmenuicon fa fa-thumbs-o-up"></i> {{ x.Title | limitTo:95 }}</div>
+
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+

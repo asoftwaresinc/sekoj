@@ -1,0 +1,27 @@
+<div class="scrollable" ng-controller="ClassifiedDetailController" >  <div ng-show="loading" class="loading"></div>
+
+<div class="scrollable-content ">
+<div class="col-xs-12 Newsdetail" ng-repeat="x in Classified">
+<h3><b class="title">{{x.Title}}</b></h3>
+<!-- <a href="{{x.Img}}"><img src="{{x.Img}}" class=" fit thu mbnail"></a> -->
+<p class="text-justify">Detail: {{x.Content}}</p>
+<p class="text-justify">Category: {{x.Category}}</p>
+<p class="text-justify">Date: {{x.Date*1000 | date:"d/M/yyyy"}}</p>
+<p class="text-justify">City: {{x.City}}</p>
+<p class="text-justify">Name: {{x.Name}}</p>
+<p class="text-justify">Email: {{x.Email}}</p>
+ 
+<br>
+
+<p class="text-justify">{{x.Tag}}</p>
+<b>Last Updated on : {{x.LastUpdated*1000 | date:'h:m a'}} <span> {{x.LastUpdated*1000 | date:'dd/MM/yyyy'}}</span></b>
+
+   
+</div>
+</div>
+ 
+ 
+</div>
+</div>
+ 
+  

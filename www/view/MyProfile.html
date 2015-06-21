@@ -1,0 +1,180 @@
+<div class="scrollable ng-scope" ng-controller="MyProfileController">
+<div ng-show="loading" class="loading"></div>
+
+ <div class="scrollable-content section">
+
+<div ng-show="Token==''">
+<div ng-include="'view/Login.html'"></div>
+</div>
+
+
+<div ng-hide="Token==''">
+<ui-state id='activeTab' default='1'></ui-state>
+
+<ul class="nav nav-tabs">
+<li ui-class="{'active': activeTab == 1}">
+<a ui-set="{'activeTab': 1}">General</a>
+</li>
+<li ui-class="{'active': activeTab == 2}">
+<a ui-set="{'activeTab': 2}">Education</a>
+</li>
+<li ui-class="{'active': activeTab == 3}">
+<a ui-set="{'activeTab': 3}">Personal</a>
+</li>
+</ul>
+
+<form action="" id="" class="ng-pristine ng-valid">
+<div class="panel row" bs-panel="">
+<div class="panel-body row">
+<div ui-if="activeTab == 1">
+
+<p class="col-xs-12">General Information</p>
+
+
+<div class="form-group "><label for="iCity" class="control-label col-xs-4">City</label>
+<div class="form-control-wrapper col-xs-8">
+<select class="form-control" ng-model="MyProfile.iCity" >
+<option ng-repeat="x in Settings.City">{{x}}</option>
+</select>
+</div><div class="clearfix"></div></div>
+
+
+
+<div class="form-group "><label for="Name" class="control-label col-xs-4">Name</label>
+<div class="form-control-wrapper col-xs-8">
+<input type="text" ng-model="MyProfile.Name" label-class="col-xs-4" class="ng-scope ng-pristine ng-valid needsclick form-control" placeholder="Your Full Name">
+</div><div class="clearfix"></div></div>
+
+<div class="form-group "><label for="Mobile" class="control-label col-xs-4">Mobile</label>
+<div class="form-control-wrapper col-xs-8">
+<input type="text" ng-model="MyProfile.Mobile" label-class="col-xs-4" class="ng-scope ng-pristine ng-valid needsclick form-control" placeholder="Mobile">
+</div><div class="clearfix"></div></div>
+ 
+<div class="form-group "><label for="Email" class="control-label col-xs-4">Email</label>
+<div class="form-control-wrapper col-xs-8">
+<input type="text" ng-model="MyProfile.Email" label-class="col-xs-4" class="ng-scope ng-pristine ng-valid needsclick form-control" placeholder="Email">
+</div><div class="clearfix"></div></div>
+ 
+<div class="form-group "><label for="Password" class="control-label col-xs-4">Password</label>
+<div class="form-control-wrapper col-xs-8">
+<input type="text" ng-model="MyProfile.Password" label-class="col-xs-4" class="ng-scope ng-pristine ng-valid needsclick form-control" placeholder="Password">
+</div><div class="clearfix"></div></div>
+
+ 
+<div class="form-group"><label for="Address" class="control-label col-xs-4">Address</label>
+<div class="form-control-wrapper col-xs-8">
+<textarea ng-model="MyProfile.Address" label-class="col-xs-4" class="ng-scope ng-pristine ng-valid needsclick form-control" placeholder="Address"></textarea>
+</div><div class="clearfix"></div></div>
+ 
+<div class="form-group "><label for="City" class="control-label col-xs-4">City</label>
+<div class="form-control-wrapper col-xs-8">
+<input type="text" ng-model="MyProfile.City" label-class="col-xs-4" class="ng-scope ng-pristine ng-valid needsclick form-control" placeholder="City">
+</div><div class="clearfix"></div></div>
+
+
+<div>
+</div>
+</div>
+
+<div ui-if="activeTab == 2">
+<p class="col-xs-12">When you apply for any job, This Information will includes in your resume.</p>
+ 
+<div class="form-group"><label for="WorkExperience" class="control-label col-xs-4">Experience</label>
+<div class="form-control-wrapper col-xs-8">
+<textarea ng-model="MyProfile.WorkExperience" label-class="col-xs-4" class="ng-scope ng-pristine ng-valid needsclick form-control" placeholder="WorkExperience"></textarea>
+</div><div class="clearfix"></div></div>
+ 
+<div class="form-group"><label for="Qualification" class="control-label col-xs-4">Qualification</label>
+<div class="form-control-wrapper col-xs-8">
+<textarea ng-model="MyProfile.Qualification" label-class="col-xs-4" class="ng-scope ng-pristine ng-valid needsclick form-control" placeholder="Qualification"></textarea>
+</div><div class="clearfix"></div></div>
+ 
+<div class="form-group"><label for="TechnicalSkills" class="control-label col-xs-4">Technical</label>
+<div class="form-control-wrapper col-xs-8">
+<textarea ng-model="MyProfile.TechnicalSkills" label-class="col-xs-4" class="ng-scope ng-pristine ng-valid needsclick form-control" placeholder="TechnicalSkills"></textarea>
+</div><div class="clearfix"></div></div>
+  
+ 
+<div class="form-group"><label for="TrainingCertificates" class="control-label col-xs-4">Certificates</label>
+<div class="form-control-wrapper col-xs-8">
+<textarea ng-model="MyProfile.TrainingCertificates" label-class="col-xs-4" class="ng-scope ng-pristine ng-valid needsclick form-control" placeholder="TrainingCertificates"></textarea>
+</div><div class="clearfix"></div></div>
+  
+<div class="form-group "><label for="Interests" class="control-label col-xs-4">Interests</label>
+<div class="form-control-wrapper col-xs-8">
+<input type="text" ng-model="MyProfile.Interests" label-class="col-xs-4" class="ng-scope ng-pristine ng-valid needsclick form-control" placeholder="Interests">
+</div><div class="clearfix"></div></div>
+
+<div class="form-group "><label for="Hobbies" class="control-label col-xs-4">Hobbies</label>
+<div class="form-control-wrapper col-xs-8">
+<input type="text" ng-model="MyProfile.Hobbies" label-class="col-xs-4" class="ng-scope ng-pristine ng-valid needsclick form-control" placeholder="Hobbies">
+</div><div class="clearfix"></div></div>
+ 
+ 
+<div class="form-group "><label for="LanguageKnown" class="control-label col-xs-4">Language</label>
+<div class="form-control-wrapper col-xs-8">
+<input type="text" ng-model="MyProfile.LanguageKnown" label-class="col-xs-4" class="ng-scope ng-pristine ng-valid needsclick form-control" placeholder="LanguageKnown">
+</div><div class="clearfix"></div></div>
+  
+ 
+  
+
+</div>
+
+<div ui-if="activeTab == 3">
+ 
+<div class="form-group "><label for="DOB" class="control-label col-xs-5">Date of Birth</label>
+<div class="form-control-wrapper col-xs-7">
+<input type="text" ng-model="MyProfile.DOB" label-class="col-xs-4" class="form-control" placeholder="yyyy/mm/dd">
+ </div><div class="clearfix"></div></div>
+ 
+<div class="form-group "><label for="Gender" class="control-label col-xs-5">Gender</label>
+<div class="form-control-wrapper col-xs-7">
+<select class="form-control" ng-model="MyProfile.Gender" >
+<option ng-repeat="x in Settings.Gender">{{x}}</option>
+</select>	
+</div><div class="clearfix"></div></div>
+
+<div class="form-group "><label for="BloodGroup" class="control-label col-xs-5">Blood Group</label>
+<div class="form-control-wrapper col-xs-7">
+<select class="form-control" ng-model="MyProfile.BloodGroup" >
+<option ng-repeat="x in Settings.BloodGroup">{{x}}</option>
+</select>
+</div><div class="clearfix"></div></div>
+ 
+<div class="form-group "><label for="FathersName" class="control-label col-xs-5">Fathers Name</label>
+<div class="form-control-wrapper col-xs-7">
+<input type="text" ng-model="MyProfile.FathersName" label-class="col-xs-4" class="ng-scope ng-pristine ng-valid needsclick form-control" placeholder="FathersName">
+</div><div class="clearfix"></div></div>
+ 
+<div class="form-group "><label for="FathersOccupation" class="control-label col-xs-5">Occupation</label>
+<div class="form-control-wrapper col-xs-7">
+<input type="text" ng-model="MyProfile.FathersOccupation" label-class="col-xs-4" class="ng-scope ng-pristine ng-valid needsclick form-control" placeholder="FathersOccupation">
+</div><div class="clearfix"></div></div>
+ 
+<div class="form-group "><label for="MothersName" class="control-label col-xs-5">Mother Name</label>
+<div class="form-control-wrapper col-xs-7">
+<input type="text" ng-model="MyProfile.MothersName" label-class="col-xs-4" class="ng-scope ng-pristine ng-valid needsclick form-control" placeholder="MothersName">
+</div><div class="clearfix"></div></div>
+ 
+<div class="form-group "><label for="MaritalStatus" class="control-label col-xs-5">Marital Status</label>
+<div class="form-control-wrapper col-xs-7">
+<select class="form-control" ng-model="MyProfile.MaritalStatus" >
+<option ng-repeat="x in Settings.MaritalStatus">{{x}}</option>
+</select>
+</div><div class="clearfix"></div></div>
+</div>
+
+<div class="form-group ">
+<div class="form-control-wrapper col-xs-12">
+<button type="button" ng-click="UpdateMyProfile()" label-class="col-xs-4" class="ng-scope ng-pristine ng-valid needsclick btn btn-primary btn-block">Update</button>
+</div><div class="clearfix"></div></div>
+ 
+
+</div>
+</div>
+
+</form>
+
+</div>
+</div></div> 

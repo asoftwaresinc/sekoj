@@ -1,0 +1,35 @@
+<div class="scrollable" ng-controller="NewsDetailController" ng-cloak="" >  
+<div ng-show="loading" class="loading"></div>
+<div class="scrollable-content ">
+
+<div class="Newsdetail"><b class="title">{{News[0].Title}}</b>
+<div class="Time"><b><i class="fa fa-clock-o"></i> {{News[0].Date*1000 | date:'EEEE dd/MM/yyyy hh:mm:ss a'}}</b></div>
+<div  class=""><a href="http://cdn.anemaindia.com/apps/iindia/cdn/i/NewsImages/tt.php?src={{News[0].Img}}&w=900" class="row"><img src="http://cdn.anemaindia.com/apps/iindia/cdn/i/NewsImages/tt.php?src={{ News[0].Img }}&w=250" class="fit"></a></div>
+<div class="col-xs-12 "><p class="text-justify">{{News[0].Content}}</p>
+
+</p>
+<br>
+</div>
+ 
+<div class="clearfix"></div>
+<div style="font-size: 20px; font-weight: bold;"><div class="col-xs-12 ">Give Your Comment's</div></div> 
+<div class="col-sm-10 "><div class="form-group"><input type="text" class="form-control" ng-model="AddComment.Comment" /></div></div>
+<div class="col-sm-2 "><div class="form-group"><button type="submit" ng-click="AddNewComment()" class="btn btn-primary pull-right"> Submit</button></div></div>
+<br> 
+<br> 
+<div class="col-sm-12">
+<table class="table table-striped table-bordered">
+<tr  ng-repeat="Comment in Comments"><td>
+{{Comment.Comment}}<br>
+<small><b>{{Comment.Name}}</b> &nbsp; {{Comment.LastUpdated*1000 | date:'dd/M/yyyy h:m a'}}</small>
+
+</td></tr>	
+</table>
+
+
+<br> 
+</div>
+</div>
+</div>
+ 
+  

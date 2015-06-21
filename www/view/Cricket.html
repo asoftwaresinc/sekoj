@@ -1,0 +1,18 @@
+ <div class="scrollable" ng-controller="CricketCtrl" > 
+<div ng-show="loading" class="loading"></div>
+<div class="scrollable-content ">
+<h3 class="text-center">Live Maches</h3>
+
+<div ng-repeat="x in Cricket">
+	<a  href="#Cricket/{{x.id}}" class="list-group-item CricketMatches"><span><b>{{x.t2}}</b></span> vs <span><b>{{x.t1}}</b></span> </a>
+</div>
+
+<div class="clearfix"></div>
+
+
+
+
+ 
+</div>
+</div>
+

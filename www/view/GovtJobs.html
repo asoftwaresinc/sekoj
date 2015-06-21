@@ -1,0 +1,22 @@
+ <div class="scrollable" ng-controller="GovtJobsListController" >  
+<div ng-show="loading" class="loading"></div>
+<div class="scrollable-content ">
+ 
+
+
+<div class="list-group-item newslist" ng-repeat="x in GovtJobs">
+<a href="#GovtJobs/Detail/{{ x.Id }}" class="media-heading">
+<div class="row">
+<div class="col-xs-12 nm b">{{ x.Title }}</div>
+<div class="pull-"><small>{{x.LastUpdated*1000 | date:'dd/MM/yyyy'}}</small> &nbsp;</div>
+</div>
+</div>
+
+
+
+
+</div>
+</div>
+
+
+

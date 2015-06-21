@@ -1,0 +1,57 @@
+<div class="scrollable" ng-controller="LoginController"> 
+<div ng-show="loading" class="loading"></div>
+
+<div class="scrollable-content ">
+ 
+<br>	
+<br>	
+<div class="col-sm-12 ">
+<div class="form-group">
+<div class="panel panel-primary">
+<div class="panel-heading">Please Login to continue</div>
+<div class="panel-body">
+
+
+
+<div class="col-sm-12 ">
+<div class="form-group">
+<label>Email id / Mobile No.</label>
+<input type="text" class="form-control" ng-init="Login.UserName=7566146228" ng-model="Login.UserName" value="" />
+</div>
+</div>
+
+<div class="col-sm-12 ">
+<div class="form-group">
+<label>Password</label>
+<input type="password"  ng-init="Login.Password=1234" class="form-control" ng-model="Login.Password" />
+<input type="hidden" ng-init="Login.Login='Yes'" class="form-control" ng-model="Login.Login"  />
+</div>
+</div>
+
+
+<div class="col-sm-12 ">
+<div class="form-group">
+<button type="submit" ng-click="LoginSubmit()" class="btn btn-primary pull-right">Login</button>
+</div>
+</div>
+
+</div>
+</div>
+Not yet registered? <a href="#/Login/Register" class="b">Register Now</a> <br>its free and always will be.
+</div>
+<div class="clearfix"></div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+</div>
+ </div>
+
+
+

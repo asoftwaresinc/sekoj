@@ -1,0 +1,43 @@
+<div class="scrollable" ng-controller="CricketScoreCtrl" > 
+<div ng-show="loading" class="loading"></div>
+<div class="scrollable-content cricketbg ">
+  
+<div class="cricketScore">
+	
+<div class="country">{{CricketScore[0].country}}</div>
+<!-- <div class="run">158/4</div> -->
+<div class="over">{{CricketScore[0].Over}}</div>
+<hr>
+
+<div class=" bating ">
+<div class="col-xs-12"><div class="col-xs-12">
+<div class="player">{{CricketScore[0].Player1}}</div>
+<div class="player">{{CricketScore[0].Player2}}</div>
+<div class="player">{{CricketScore[0].Player3}}</div>
+</div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+
+<div class="status" style="padding-top: 10px;
+font-size: 20px;
+text-align: center;">{{CricketScore[0].Status}}</div>
+<hr>
+
+<div class="col-xs-12 teams">
+<div class="team">{{CricketScore[0].si2}}</div>
+<div class="vs">vs</div>
+<div class="team">{{CricketScore[0].si1}}</div>
+</div> 
+</div>
+<div class="clearfix"></div> 
+<br>
+<div style="text-align:center;">Last Updated: {{CricketScore[0].LU*1000 | date:'dd/mm/yyyy hh:mm:ss a'}}</div>
+
+
+<div class="clearfix"></div> 
+
+</div>
+</div>
+

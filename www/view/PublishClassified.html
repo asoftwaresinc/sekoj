@@ -1,0 +1,80 @@
+<div class="scrollable" ng-controller="PublishClassifiedController" >  
+<div ng-show="loading" class="loading"></div>
+<div class="scrollable-content ">
+
+<div ng-show="Token==''">
+<div ng-include="'view/Login.html'"></div>
+</div>
+
+<div ng-hide="Token==''">
+ 
+<br>
+<div class="col-sm-12 ">
+
+<h4>Post FREE Ad</h4>
+<div class="form-group">
+<label>Title</label>
+<input type="text" class="form-control" required ng-model="PublishClassified.Title" />
+</div>
+</div>
+
+
+<div class="col-sm-12 ">
+<div class="form-group">
+<label>City</label>
+<select class="form-control" ng-model="PublishClassified.City" >
+<option ng-repeat="x in Settings.City">{{x}}</option>
+</select>
+</div>
+</div>
+
+
+<div class="col-sm-12 ">
+<div class="form-group">
+<label>Ad Category</label>
+<select class="form-control" ng-model="PublishClassified.Category" >
+<option ng-repeat="x in Settings.ClassifiedCategory">{{x}}</option>
+</select>
+</div>
+</div>
+
+
+<div class="col-sm-12 ">
+<div class="form-group">
+<label>Description</label>
+<textarea class="form-control" required  rows="6" ng-model="PublishClassified.Content" ></textarea>
+</div>
+</div>
+<!-- <div class="col-sm-12">
+<div class="form-group">
+<label for="">Select Photo </label>
+<input type="file" name="Images" id=""class="form-control">
+</div>
+</div> -->
+
+<div class="col-sm-12 ">
+<div class="form-group">
+<label for="Agree">I Agree To all Terms & Conditions.</label>
+</div>
+</div>
+
+<div class="col-sm-12 ">
+<div class="form-group">
+<button type="submit" ng-click="PublishClassifiedSubmit()" class="btn btn-primary pull-right">Submit</button>
+</div>
+
+
+<br>
+* All fields are required.
+<br>
+
+</div>
+
+
+  
+</div>
+</div>
+</div>
+
+
+

@@ -1,0 +1,276 @@
+body{font-family: roboto, cdac !important; font-weight: 400}
+#lightbulb {
+  font-size: 100px;
+  display: block;
+  text-align: center;
+
+}
+.fa{min-width: 21px;}
+a.media-heading {font: 1.2em 'cdac',arial;font-weight: normal;color: #000; }
+a.media-heading:hover {text-decoration: none;}
+.newslist img.thumbnail {height: 90px; width: 100%;}
+.newslist:hover {background: #eee;border-left: solid 3px;}
+.newslist .NoOfVacancy { color: #0055b3}
+
+
+.fit {width:100%;}
+.thumbnail {min-height: 75px; margin:0; background: url("../i/Design/thumbnail-gs.png") no-repeat center center;
+background-size: cover;}
+.no-margin{margin: 0;}
+
+.sky {background: url("sky.jpg");}
+.sky1 { font-size: 14px; color: #fff;}
+h1 {
+  padding: 0;
+  margin: 10px 0;
+}
+
+.chat-user-avatar {
+  font-size: 40px;
+  background: #ccc;
+  padding: 5px 10px;
+}
+
+.feature-icon {
+  font-size: 44px;
+  padding: 0;
+  line-height: 68px;
+  width: 72px;
+  text-align: center;
+  opacity: .8;
+  border: 3px solid;
+  border-radius: 200px;
+  height: 72px;
+  margin-bottom: 20px;
+}
+
+.feature-icon.fa-gamepad {
+  line-height: 60px;
+}
+
+.feature-icon.fa-tachometer {
+  line-height: 60px;
+}
+
+.app-content-loading {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  position: relative;
+}
+
+.loading-spinner {
+  position: absolute;
+  font-size: 50px;
+  left: 50%;
+  top: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+}
+
+.carousel-example-content {
+  position: absolute;
+  font-size: 50px;
+  line-height: 50px;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  margin-top: -50px;
+}
+
+
+.carousel-item {
+  display: block;
+  color: #444;
+  background: #f4f4f4;
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 1;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+.carousel {
+  padding: 20px;
+  overflow: visible;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: visible;
+}
+
+.carousel>.item, .carousel-item {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.carousel-inner>.item:first-child {
+  z-index: 1998; 
+}
+
+.carousel-inner>.item.active {
+  z-index: 2000;
+}
+
+.carousel-inner>.item.active + .item {
+  z-index: 1999;
+}
+
+[drag-to-dismiss]{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+.notices-container {
+  overflow-x: hidden;
+}
+
+.dismiss {
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.dismitted {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.list-group-item-home {
+  padding: 20px 0; 
+}
+
+pre {
+  font-family: cdac;
+  font-size: 16px;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  margin: 0;
+  text-align: left !important;
+  border:none; background: none;
+  overflow: :visible;
+
+
+  
+}
+
+input.scrollable-header {
+  border-bottom: 3px solid #ccc;
+}
+.thumbnail{ margin-right: 10px; }
+
+
+
+
+
+
+
+
+/*========Login Page css=======*/
+.login-form{bottom: 50px;margin: 0 auto;display: block; max-width: 500px}
+.login-bg{background: #313541 !important;color: #fff;}
+.login-base{padding: 10px;}
+.logo-line{font-family: 'cdac',roboto,Arial !important;}
+.login-form .form-control{font-size: 1em; background: #484b54;border: none;border-radius: 0px;color: #fcfcfc !important;font-weight: bold;}
+.login-form .input-group-addon i{color: #fcfcfc !important;font-size: 1.2em;}
+.login-form .input-group-addon{background:#484b54;border: 0px;border-radius: 0px; }
+.login-form .btn{background: #08d68b;border: #08b375;padding: 10px;border-radius: 0px;}
+.forgot a{color: #979797;}
+.forgot a:hover{color: #50adf4;}
+
+/*=====left side changes===*/
+.left-nav .list-group-item{background: #333;color: #fff;border-bottom: 1px solid #2d3139;border-top:3px solid #000000;font-size: 15px; }
+.scrollable-header-left{background-color: #353942;color: #fff;border-bottom: 1px solid #2d3139;}
+.scrollable-content-left{background: url('') #000;color: #fff;border-bottom: 1px solid #2d3139;}
+
+
+
+.nm{ margin: 0; padding: 0;}
+.mr{padding:0 10px  0 0 ; }
+.Newsdetail .title {margin-top: 5px;
+margin-top: 5px;
+border-bottom: solid 1px #ccc;
+
+display: block;
+line-height: 35px;
+font-family: 'cdac',roboto,Arial !important;
+text-shadow: 0px 0px 1px #999;
+padding: 10px 3px;
+font-size: 20px;
+}
+
+.Newsdetail p {  font-size: 18px; line-height: 30px; font-weight: 800; font-family: 'cdac',roboto,Arial !important;}
+.Newsdetail .Time {background: #eee;
+padding: 8px 3px;}
+
+
+.legend {border-bottom: solid 1px #ccc;
+font-size: 18px;
+color: #000000;
+font-weight: 400;
+margin-bottom: 7px;}
+
+.salarytext {font-size: 30px;float: left; line-height: 26px}
+.salary {font-size: 30px;float: right; font-weight: 800; line-height: 26px; padding: 13px}
+
+.x {font-size: 1.3em}
+.xx {font-size: 1.8em}
+.xxx {font-size: 2.5em}
+.-x {font-size: .8em}
+.-xx {font-size: .6em}
+.-xxx {font-size: .4em}
+
+.sidebarprofile {padding:10px 10px 10px 0px; clear: both; background: #111}
+.sidebarprofile .name{ font-size: 19px; color: #fff; font-weight: bold; margin-top: 15px;}
+.sidebarprofile .City{ font-size: 15px; color: #fff; font-weight: bold;}
+.sidebarmenuicon { width: 30px;}
+
+.btn { border-radius: 0px; }
+.HomeMainNews:hover {text-decoration: none;}
+.HomeMainNewsTitle{margin-top: -85px;position: relative;display: block;color: #fff;text-shadow: 0px 0px 2px #000,0px 0px 2px #000,0px 0px 2px #000,0px 0px 2px #000,0px 0px 2px #000,0px 0px 2px #000,0px 0px 2px #000,0px 0px 2px #000,0px 0px 2px #000;font-size: 24px;height: 75px;padding: 10px;overflow: hidden;margin-bottom: 10px;background: rgba(0, 0, 0, 0.45);font-weight: bold; }
+
+
+/*@font-face {src: url("../fonts/cdac.ttf");font-family: "cdac";} */
+
+.b {font-weight:bold;}
+.nav-tabs .btn{padding:7px 10px 7px 10px;}
+
+.cricketbg { background: url();}
+.cricketScore { font-family: arial}
+.cricketScore .country{ font-size: 40px; text-transform: uppercase; font-weight: normal; text-align:center;margin-top: 10px;}
+.cricketScore .run { font-weight: bold; font-size: 70px; text-align: center; line-height: 60px; font-family: arial; text-shadow: 3px 3px 6px #999;}
+.cricketScore .over { font-size: 30px; margin-top: 15px; text-align: center; line-height: 20px;}
+.cricketScore .bating { font-size: 18px; background: #111; text-align: left; padding:5px; font-family: calibri; }
+.cricketScore .player {color: #fff; padding:3px 5px;}
+.cricketScore .teams  { font-size: 16px; text-align: center; background: #ddd;padding: 10px;}
+.cricketScore .team { font-size: 18px; line-height: 18px;  text-align: center; color: #000;}
+.cricketScore .vs { text-align: center; font-size: 24px; font-weight: bold; line-height: 40px;}
+.cricketScore hr { line-height: 0 ; padding: 0; margin:10px;}

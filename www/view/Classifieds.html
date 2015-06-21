@@ -1,0 +1,30 @@
+ <div class="scrollable" ng-controller="ClassifiedListController" >  
+<div class="scrollable-content ">
+<div ng-show="loading" class="loading"></div>
+
+<div class="btn-group justified nav-tabs">
+<!--         <a href="#/News/National" class="btn btn-default">National</a>
+<a href="#/News/Politics" class="btn btn-default">Politics</a>
+ --><a href="#/Publish/Classified" class="btn btn-danger btn-block">Post FREE Ad</a> 
+</div>  
+
+
+<div class="clearfix"></div>
+
+
+ 
+<div class="list-group-item newslist" ng-repeat="x in Classified">
+<a href="#Classified/Detail/{{ x.Id }}" class="media-heading">
+<div class="row">
+<div class="col-xs-12 nm b">{{ x.Title | limitTo: 60}}</div>
+<div class="pull-left"><small>Date: {{x.LastUpdated*1000 | date:'dd/M/yyyy'}}</small> </div>
+<div class="pull-right"><small> Posted by: {{ x.Name}} </small> &nbsp;</div>
+</div>
+</div>
+
+ 
+</div>
+</div>
+
+
+

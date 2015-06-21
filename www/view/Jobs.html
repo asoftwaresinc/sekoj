@@ -1,0 +1,20 @@
+ <div class="scrollable" ng-controller="JobsListController" >  
+<div ng-show="loading" class="loading"></div>
+<div class="scrollable-content ">
+ 
+
+<div class="list-group-item newslist" ng-repeat="x in Jobs">
+<a href="#Jobs/Detail/{{ x.Id }}" class="media-heading">
+<div class="row">
+<div class="col-xs-12 nm b">{{ x.Title | limitTo:95 }}</div>
+<div class="pull-left"><small>{{x.Sector}}</small> </div>
+<div class="pull-right NoOfVacancy"><small>Date: {{x.LastUpdated*1000 | date:"dd/M/yyyy "}}</small> &nbsp;</div>
+</div>
+</div>
+
+
+</div>
+</div>
+
+
+

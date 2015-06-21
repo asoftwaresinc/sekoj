@@ -1,0 +1,24 @@
+<div class="scrollable" ng-controller="GovtJobsDetailController" > <div ng-show="loading" class="loading"></div>
+ 
+<div class="scrollable-content ">
+<div class="col-xs-12 Newsdetail" ng-repeat="x in GovtJob">
+<h3><b class="title">{{x.Title}}</b></h3>
+<!-- <a href="{{x.Img}}"><img src="{{x.Img}}" class=" fit thu mbnail"></a> -->
+<p class="text-danger">Name: {{x.Name}}</p>
+<p class="">Address: {{x.Address}}</p>
+<p class="">Website: <a href="{{x.Website}}" target="blank">{{x.Website}}</a></p>
+<p class="text-justify">Detail: {{x.Content}}</p>
+<br>
+<p class="text-justify">{{x.Tag}}</p>
+
+<b>Last Updated on : {{x.LastUpdated*1000 | date:'h:m a'}} <span> {{x.LastUpdated*1000 | date:'dd/MM/yyyy'}}</span></b>
+ 
+<br> 
+<br> 
+<br> 
+</div>
+
+</div>
+</div>
+ 
+  

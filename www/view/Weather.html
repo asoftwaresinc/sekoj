@@ -1,0 +1,206 @@
+<div class="scrollable" ng-controller="WeatherCtrl" > 
+<div ng-show="loading" class="loading"></div>
+<div style="background: url('http://cdn.anemaindia.com/apps/iindia/cdn/i/Design/weatherbg.jpg') #054661 top;
+  padding-top: 43px;
+  display: block;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-size: cover;
+  ">
+<div class="scrollable-content ">
+
+<br>
+
+<div class="col-xs-6">
+<img src="cli/weathericon.png" style="width:50px; float:left">
+<div style="   color: #fff;
+  font-size: 20px;
+  padding: 13px;
+  margin-left: 53px;">
+  {{Weather.query.results.channel.item.forecast[0].text}}</div>   
+</div>
+
+
+<div class="col-xs-12">
+<h3><span  style="color:#fff; font-size:100px;">
+{{Weather.query.results.channel.item.condition.temp | number:0}}°C 
+</span>
+</h3></div>
+<div class="clearfix"></div>
+
+
+<div style="background:rgba(0,0,0,.5); padding:10px;">
+<div style="  color: #fff;  font-size: 20px;  border-bottom: solid 1px #666;">Astronomy</div>
+<div style="padding-top:10px; color:#fff; font-size:14px;">
+
+<table style="width:100%" border="0">
+<tr>
+<td width="20%">Sunrise</td>
+<td width="5%">:</td>
+<td width="30%">{{Weather.query.results.channel.astronomy.sunrise}}</td>
+<td width="10%">City</td>
+<td width="5%">:</td>
+<td width="20%">{{Weather.query.results.channel.location.city}}</td>
+</tr>
+
+<tr>
+<td width="20%">Sunset</td>
+<td width="5%">:</td>
+<td width="30%">{{Weather.query.results.channel.astronomy.sunset}}</td>
+<td width="10%">Region</td>
+<td width="5%">:</td>
+<td width="20%">{{Weather.query.results.channel.location.region}}</td>
+</tr>
+
+<tr>
+<td width="20%">Latitude</td>
+<td width="5%">:</td>
+<td width="30%">{{Weather.query.results.channel.item.lat}}</td>
+<td width="10%">Country</td>
+<td width="5%">:</td>
+<td width="20%">{{Weather.query.results.channel.location.country}}</td>
+</tr>
+
+
+<tr>
+<td width="20%">Longitute</td>
+<td width="5%">:</td>
+<td width="30%">{{Weather.query.results.channel.item.long}}</td>
+<!--<td width="10%">Country</td>
+<td width="5%">:</td>
+<td width="20%">{{Weather.query.results.channel.location.country}}</td>
+-->
+</tr>
+</table>
+</div>
+</div>
+
+<br>
+
+
+<div style="background:rgba(0,0,0,.5); padding:10px;">
+<div style="  color: #fff;  font-size: 20px;  border-bottom: solid 1px #666;">Atmosphere</div>
+<div style="padding-top:10px; color:#fff; font-size:14px;">
+
+<table style="width:100%" border="0">
+<tr>
+<td width="20%">Visibility</td>
+<td width="5%">:</td>
+<td width="30%">{{Weather.query.results.channel.atmosphere.visibility}} km</td>
+<td width="10%">Humidity</td>
+<td width="5%">:</td>
+<td width="20%">{{Weather.query.results.channel.atmosphere.humidity}} %</td>
+</tr>
+
+<tr>
+<td width="20%">Pressure</td>
+<td width="5%">:</td>
+<td width="30%">{{Weather.query.results.channel.atmosphere.pressure}} in</td>
+<td width="10%">Rising</td>
+<td width="5%">:</td>
+<td width="20%">{{Weather.query.results.channel.atmosphere.rising}}</td>
+</tr>
+ 
+</table>
+</div>
+</div>
+
+
+<br>
+
+
+<div style="background:rgba(0,0,0,.5); padding:10px;">
+<div style="  color: #fff;  font-size: 20px;  border-bottom: solid 1px #666;">Wind</div>
+<div style="padding-top:10px; color:#fff; font-size:14px;">
+
+<table style="width:100%" border="0">
+<tr>
+<td width="20%">Wind Speed</td>
+<td width="5%">:</td>
+<td width="30%">{{Weather.query.results.channel.wind.speed * 1.609}} km/h</td>
+<td width="10%">Chill</td>
+<td width="5%">:</td>
+<td width="20%">{{Weather.query.results.channel.wind.chill}}</td>
+</tr>
+
+<tr>
+<td width="20%">Direction</td>
+<td width="5%">:</td>
+<td width="30%">{{Weather.query.results.channel.wind.direction}} digree</td>
+</tr>
+ 
+</table>
+</div>
+</div>
+
+<br>
+ 
+
+
+
+
+
+<div style="background:rgba(0,0,0,.5); padding:10px;">
+<div style="  color: #fff;  font-size: 20px;  border-bottom: solid 1px #666;">Forcast</div>
+<div style="padding-top:10px; color:#fff; font-size:14px;">
+
+<table style="width:100%; font-size:15px;" border="0">
+
+<tr>
+<td width="20%">  {{Weather.query.results.channel.item.forecast[0].day}}</td>
+<td width="10%"><img src="cli/weathericon.png" width="20"></td>
+<td width="30%">{{Weather.query.results.channel.item.forecast[0].text}}</td>
+<td width="20%">{{Weather.query.results.channel.item.forecast[0].high}} <sup>o</sup>C </td>
+<td width="20%">{{Weather.query.results.channel.item.forecast[0].low}} <sup>o</sup>C</td>
+</tr>
+
+<tr>
+<td>  {{Weather.query.results.channel.item.forecast[1].day}}</td>
+<td><img src="cli/weathericon.png" width="20"></td>
+<td>{{Weather.query.results.channel.item.forecast[1].text}}</td>
+<td>{{Weather.query.results.channel.item.forecast[1].high}} <sup>o</sup>C</td>
+<td>{{Weather.query.results.channel.item.forecast[1].low}} <sup>o</sup>C</td>
+</tr>
+
+<tr>
+<td>  {{Weather.query.results.channel.item.forecast[2].day}}</td>
+<td><img src="cli/weathericon.png" width="20"></td>
+<td>{{Weather.query.results.channel.item.forecast[2].text}}</td>
+<td>{{Weather.query.results.channel.item.forecast[2].high}} <sup>o</sup>C</td>
+<td>{{Weather.query.results.channel.item.forecast[2].low}} <sup>o</sup>C</td>
+</tr>
+
+<tr>
+<td>  {{Weather.query.results.channel.item.forecast[3].day}}</td>
+<td><img src="cli/weathericon.png" width="20"></td>
+<td>{{Weather.query.results.channel.item.forecast[3].text}}</td>
+<td>{{Weather.query.results.channel.item.forecast[3].high}} <sup>o</sup>C</td>
+<td>{{Weather.query.results.channel.item.forecast[3].low}} <sup>o</sup>C</td>
+</tr>
+ 
+<tr>
+<td>  {{Weather.query.results.channel.item.forecast[4].day}}</td>
+<td><img src="cli/weathericon.png" width="20"></td>
+<td>{{Weather.query.results.channel.item.forecast[4].text}}</td>
+<td>{{Weather.query.results.channel.item.forecast[4].high}} <sup>o</sup>C</td>
+<td>{{Weather.query.results.channel.item.forecast[4].low}} <sup>o</sup>C</td>
+</tr>
+ 
+<tr>
+<td colspan="2"><br>Last Updated : </td>
+<td colspan="2"><br>{{Weather.query.results.channel.lastBuildDate}}</td>
+</tr>
+ 
+</table>
+</div>
+</div>
+
+
+ 
+   
+</div></div>
+<div class="clearfix"></div>
+</div>
